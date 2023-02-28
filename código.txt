@@ -1,0 +1,52 @@
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5
+$ git remote add origin https://github.com/Agijoner/Entornos.git
+fatal: not a git repository (or any of the parent directories): .git
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5
+$ git clone https://github.com/Agijoner/Entornos.git .
+Cloning into '.'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 8 (delta 0), reused 8 (delta 0), pack-reused 0
+Receiving objects: 100% (8/8), done.
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git add .
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ echo "Fichero repo3" > repo3.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git add .
+warning: in the working copy of 'repo3.txt', LF will be replaced by CRLF the next time Git touches it
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git commit -m "Creo repo3 paso3"
+[master 3919acc] Creo repo3 paso3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 repo3.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git log --oneline
+3919acc (HEAD -> master) Creo repo3 paso3
+ca96013 (origin/master, origin/HEAD) Creo repo1 y repo 2 paso2
+9a0ed12 Creo repo1 y repo 2 paso1
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Agijoner/Entornos.git
+   ca96013..3919acc  master -> master
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ ^C
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$

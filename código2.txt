@@ -1,0 +1,107 @@
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git clone https://github.com/Agijoner/Entornos.git
+Cloning into 'Entornos'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 11 (delta 1), reused 10 (delta 0), pack-reused 0
+Receiving objects: 100% (11/11), done.
+Resolving deltas: 100% (1/1), done.
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git branch pruebas2
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git checkout pruebas2
+Switched to branch 'pruebas2'
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ git log --oneline
+3919acc (HEAD -> pruebas2, origin/master, origin/HEAD, master) Creo repo3 paso3
+ca96013 Creo repo1 y repo 2 paso2
+9a0ed12 Creo repo1 y repo 2 paso1
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ echo "Creo archivo en pruebas2" >> archivo.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ echo "otro texto" >> archivo.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ git add archivo.txt
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ git commit -m "Creado archivo.txt en la rama pruebas2"
+[pruebas2 8ccffd1] Creado archivo.txt en la rama pruebas2
+ 1 file changed, 2 insertions(+)
+ create mode 100644 archivo.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ git log --oneline
+8ccffd1 (HEAD -> pruebas2) Creado archivo.txt en la rama pruebas2
+3919acc (origin/master, origin/HEAD, master) Creo repo3 paso3
+ca96013 Creo repo1 y repo 2 paso2
+9a0ed12 Creo repo1 y repo 2 paso1
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (pruebas2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ echo "Creo en master" > archivo.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git add archivo.txt
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git commit -m "Creado archivo.txt en master"
+[master 16f8068] Creado archivo.txt en master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git log --oneline
+16f8068 (HEAD -> master) Creado archivo.txt en master
+3919acc (origin/master, origin/HEAD) Creo repo3 paso3
+ca96013 Creo repo1 y repo 2 paso2
+9a0ed12 Creo repo1 y repo 2 paso1
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$ git merge pruebas2 master
+Auto-merging archivo.txt
+CONFLICT (add/add): Merge conflict in archivo.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      archivo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Entornos/
+        "c\303\263digo.txt"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master|MERGING)
+$ git add archivo.txt
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master|MERGING)
+$ git commit -m "valido para solucionar conflicto"
+[master 44d6821] valido para solucionar conflicto
+
+AzureAD+GhiataAlexandruSilvi@1DAM-14 MINGW64 ~/Documents/repositorio5 (master)
+$
