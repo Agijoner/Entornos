@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Linea 8
+=======
+Linea 10
+>>>>>>> actividad3
